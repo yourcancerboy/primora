@@ -6,6 +6,8 @@
 <title>Primora Escape Co. — Elevated Moments. Effortless Journeys.</title>
 <link rel="icon" type="image/x-icon" href="img/logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init({ publicKey: 'K60EMPhHrQQ_cRW2q' });</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -1912,7 +1914,7 @@
     if (isPromo) {
       const msgField = document.getElementById('cf-msg');
       if (msgField && !msgField.value) {
-        msgField.value = "I'd like to claim the exclusive founding guest discount. Please share more details about available packages.";
+        msgField.value = "I'd like to claim the Founding Guest Rate (SGD 159/pax). Please share more details.";
       }
     }
   }
@@ -1930,39 +1932,34 @@
     if (e.key === 'Escape') closeEmailModal();
   });
 
-  // ── Contact Form Submission ──────────────────────────────
+  // ── Contact Form Submission (EmailJS) ───────────────────
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('formSubmitBtn');
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    const name     = document.getElementById('cf-name').value.trim();
-    const email    = document.getElementById('cf-email').value.trim();
-    const phone    = document.getElementById('cf-phone').value.trim();
-    const origin   = document.getElementById('cf-origin').value;
-    const dest     = document.getElementById('cf-dest').value;
-    const pax      = document.getElementById('cf-pax').value;
-    const dates    = document.getElementById('cf-dates').value.trim();
-    const message  = document.getElementById('cf-msg').value.trim();
+    const templateParams = {
+      from_name:   document.getElementById('cf-name').value.trim(),
+      from_email:  document.getElementById('cf-email').value.trim(),
+      phone:       document.getElementById('cf-phone').value.trim() || 'Not provided',
+      origin:      document.getElementById('cf-origin').value || 'Not specified',
+      destination: document.getElementById('cf-dest').value || 'Not specified',
+      pax:         document.getElementById('cf-pax').value || 'Not specified',
+      dates:       document.getElementById('cf-dates').value.trim() || 'Flexible',
+      message:     document.getElementById('cf-msg').value.trim(),
+    };
 
-    // Build mailto link as fallback while also showing success state
-    const subject = encodeURIComponent(`Enquiry from ${name} — ${dest || 'General'}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n` +
-      `From: ${origin || 'Not specified'}\nDestination: ${dest || 'Not specified'}\n` +
-      `Group Size: ${pax || 'Not specified'}\nDates: ${dates || 'Flexible'}\n\n` +
-      `Message:\n${message}`
-    );
-
-    // Open mailto (client's default mail app) targeting the business email
-    window.location.href = `mailto:hello@primoraescape.com?subject=${subject}&body=${body}`;
-
-    // Show success state after brief delay
-    setTimeout(() => {
+    try {
+      await emailjs.send('service_5c6wsbc', 'template_pom5t7q', templateParams);
       document.getElementById('contactForm').style.display = 'none';
       document.getElementById('formSuccess').classList.add('show');
-    }, 600);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      btn.disabled = false;
+      btn.textContent = 'Send Enquiry →';
+      alert('Something went wrong. Please try again or reach us via WhatsApp.');
+    }
   });
 </script>
 </body>
