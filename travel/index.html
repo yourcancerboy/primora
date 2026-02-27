@@ -688,6 +688,213 @@
     .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
   }
 
+  /* ═══════════════════════════════════════════════════
+     PROMO POPUP
+  ═══════════════════════════════════════════════════ */
+  .promo-backdrop {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(14,26,38,0.72); backdrop-filter: blur(5px);
+    opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+  }
+  .promo-backdrop.show { opacity: 1; pointer-events: all; }
+
+  .promo-popup {
+    position: fixed; top: 50%; left: 50%; z-index: 1000;
+    width: 390px; max-width: calc(100vw - 32px); background: var(--navy);
+    border: 1px solid rgba(214,185,140,0.30);
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 24px 80px rgba(14,26,38,0.45);
+    transform: translate(-50%, -50%) scale(0.90);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .promo-popup.show { transform: translate(-50%, -50%) scale(1); opacity: 1; pointer-events: all; }
+  .promo-popup.hide { transform: translate(-50%, -50%) scale(0.90); opacity: 0; pointer-events: none; }
+
+  .promo-bar {
+    background: linear-gradient(90deg, var(--gold), var(--champagne), var(--gold));
+    background-size: 200% 100%;
+    animation: shimmerBar 3s ease infinite;
+    padding: 7px 20px;
+    font-size: 9px; font-weight: 600; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--navy);
+    display: flex; align-items: center; gap: 8px;
+  }
+  @keyframes shimmerBar { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+  .promo-bar-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--navy); opacity: 0.5;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .promo-body { padding: 24px 24px 20px; }
+  .promo-slots { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .promo-slots-track { display: flex; gap: 4px; }
+  .promo-slot-dot { width: 18px; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.12); }
+  .promo-slot-dot.filled { background: var(--champagne); }
+  .promo-slots-label { font-size: 10px; color: rgba(255,255,255,0.40); letter-spacing: 0.08em; }
+
+  .promo-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 600; color: var(--white);
+    line-height: 1.15; margin-bottom: 8px;
+  }
+  .promo-headline em { font-style: italic; color: var(--champagne); }
+  .promo-desc { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.50); line-height: 1.7; margin-bottom: 20px; }
+
+  .promo-offer {
+    background: rgba(214,185,140,0.07); border: 1px solid rgba(214,185,140,0.18);
+    border-radius: 4px; padding: 12px 16px; margin-bottom: 18px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .promo-offer-left {}
+  .promo-offer-label { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); display: block; margin-bottom: 3px; }
+  .promo-offer-value { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--champagne); }
+  .promo-offer-badge {
+    background: var(--champagne); color: var(--navy);
+    font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px; white-space: nowrap; flex-shrink: 0;
+  }
+
+  .promo-cta {
+    width: 100%; padding: 14px 20px;
+    background: var(--champagne); color: var(--navy);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .promo-cta:hover { background: var(--gold); color: var(--white); transform: translateY(-1px); }
+  .promo-cta-arrow { font-size: 14px; transition: transform 0.3s; }
+  .promo-cta:hover .promo-cta-arrow { transform: translateX(3px); }
+
+  .promo-dismiss {
+    width: 100%; padding: 10px; background: none; border: none; cursor: pointer;
+    font-size: 11px; color: rgba(255,255,255,0.22); letter-spacing: 0.06em;
+    transition: color 0.3s; margin-top: 2px;
+  }
+  .promo-dismiss:hover { color: rgba(255,255,255,0.45); }
+
+  .promo-close {
+    position: absolute; top: 10px; right: 12px;
+    width: 26px; height: 26px; background: rgba(0,0,0,0.25);
+    border: none; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: rgba(255,255,255,0.55); font-size: 13px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .promo-close:hover { background: rgba(0,0,0,0.45); color: var(--white); }
+
+  /* ═══════════════════════════════════════════════════
+     EMAIL CONTACT FORM MODAL
+  ═══════════════════════════════════════════════════ */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(14,26,38,0.80); backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+  .modal-panel {
+    background: var(--ivory); width: 100%; max-width: 560px;
+    border-radius: 4px; overflow: hidden;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+    box-shadow: 0 40px 100px rgba(14,26,38,0.50);
+    max-height: 92vh; overflow-y: auto;
+  }
+  .modal-overlay.open .modal-panel { transform: translateY(0) scale(1); }
+
+  .modal-header { background: var(--navy); padding: 28px 32px 24px; position: relative; }
+  .modal-header-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(214,185,140,0.10); border: 1px solid rgba(214,185,140,0.22);
+    border-radius: 2px; padding: 5px 14px;
+    font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--champagne); margin-bottom: 12px;
+  }
+  .modal-header-chip::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--champagne); flex-shrink:0; }
+  .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); line-height: 1.2; }
+  .modal-title em { font-style: italic; color: var(--champagne); }
+  .modal-subtitle { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.6; margin-top: 8px; }
+  .modal-close-btn {
+    position: absolute; top: 20px; right: 20px;
+    width: 32px; height: 32px; background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: rgba(255,255,255,0.50); font-size: 16px; line-height: 1;
+    transition: background 0.3s, color 0.3s;
+  }
+  .modal-close-btn:hover { background: rgba(255,255,255,0.14); color: var(--white); }
+
+  .modal-body { padding: 28px 32px 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-mid); margin-bottom: 7px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 12px 14px;
+    background: var(--white); border: 1px solid var(--teal-pale);
+    border-radius: 2px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 300; color: var(--text);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none; -webkit-appearance: none; appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184,150,90,0.10);
+  }
+  .form-group textarea { resize: vertical; min-height: 96px; line-height: 1.6; }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A8A96' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
+    padding-right: 36px; cursor: pointer;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-light); font-weight: 300; }
+  .form-divider { height: 1px; background: var(--teal-pale); margin: 8px 0 20px; }
+  .form-section-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+
+  .form-submit {
+    width: 100%; padding: 15px 20px; margin-top: 8px;
+    background: var(--navy); color: var(--white);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .form-submit:hover { background: var(--gold); transform: translateY(-1px); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .form-success { text-align: center; padding: 48px 24px; display: none; }
+  .form-success.show { display: block; }
+  .form-success-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(184,150,90,0.10); border: 1px solid rgba(184,150,90,0.28);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; color: var(--gold);
+  }
+  .form-success-icon svg { display: block; }
+  .form-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+  .form-success p { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+
+  @media (max-width: 768px) {
+    .promo-popup { width: calc(100vw - 32px); max-width: 390px; }
+    .modal-header { padding: 24px 24px 20px; }
+    .modal-body { padding: 24px 24px 28px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+
   /* ── Small phones: 480px ── */
   @media (max-width: 480px) {
     .hero-title { font-size: clamp(36px, 10vw, 48px); }
@@ -705,6 +912,138 @@
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══ PROMO POPUP ═══════════════════════════════════════ -->
+<div class="promo-backdrop" id="promoBackdrop"></div>
+<div class="promo-popup" id="promoPopup">
+  <div class="promo-bar">
+    <span class="promo-bar-dot"></span>
+    Limited Offer — First 10 Customers Only
+  </div>
+  <button class="promo-close" id="promoClose" aria-label="Close">✕</button>
+  <div class="promo-body">
+    <div class="promo-slots">
+      <div class="promo-slots-track">
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot filled"></div>
+        <div class="promo-slot-dot"></div>
+        <div class="promo-slot-dot"></div>
+        <div class="promo-slot-dot"></div>
+      </div>
+      <span class="promo-slots-label">7 of 10 claimed</span>
+    </div>
+    <div class="promo-headline">Your First Trip,<br><em>Exceptionally</em> Priced.</div>
+    <p class="promo-desc">We are opening our doors to 10 founding guests. Each receives a curated Batam package at a rate we will not offer again.</p>
+    <div class="promo-offer">
+      <div class="promo-offer-left">
+        <span class="promo-offer-label">Exclusive Founding Discount</span>
+        <div class="promo-offer-value">20% <span style="font-size:13px;color:rgba(214,185,140,0.6);font-family:'DM Sans',sans-serif;font-weight:300;">off your first package</span></div>
+      </div>
+      <span class="promo-offer-badge">3 slots left</span>
+    </div>
+    <button class="promo-cta" id="promoCtaBtn">
+      Claim Your Discount — WhatsApp Us <span class="promo-cta-arrow">→</span>
+    </button>
+    <button class="promo-dismiss" id="promoDismiss">Not now</button>
+  </div>
+</div>
+
+<!-- ═══ EMAIL CONTACT FORM MODAL ══════════════════════════ -->
+<div class="modal-overlay" id="emailModal">
+  <div class="modal-panel" id="emailModalPanel">
+    <div class="modal-header">
+      <div class="modal-header-chip">Send Us a Message</div>
+      <h2 class="modal-title">Plan Your <em>Journey</em></h2>
+      <p class="modal-subtitle">We will respond within one hour during business hours (Mon–Sat, 9am–9pm).</p>
+      <button class="modal-close-btn" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body" id="modalFormBody">
+      <form id="contactForm" novalidate>
+        <span class="form-section-label">Your Details</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Full Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" placeholder="you@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-phone">Phone / WhatsApp</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="+65 or +60 …">
+          </div>
+          <div class="form-group">
+            <label for="cf-origin">Travelling From</label>
+            <select id="cf-origin" name="origin">
+              <option value="" disabled selected>Select country</option>
+              <option>Singapore</option>
+              <option>Malaysia</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+        <span class="form-section-label">Trip Preferences</span>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-dest">Destination</label>
+            <select id="cf-dest" name="destination">
+              <option value="" disabled selected>Select destination</option>
+              <option>Batam Island</option>
+              <option>Bali</option>
+              <option>Multiple Destinations</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-pax">Group Size</label>
+            <select id="cf-pax" name="pax">
+              <option value="" disabled selected>Number of people</option>
+              <option>1–2 pax</option>
+              <option>3–5 pax</option>
+              <option>6–10 pax</option>
+              <option>11–20 pax</option>
+              <option>20+ pax</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-dates">Preferred Travel Dates</label>
+          <input type="text" id="cf-dates" name="dates" placeholder="e.g. Mid-March 2026, flexible">
+        </div>
+
+        <div class="form-group">
+          <label for="cf-msg">Your Message</label>
+          <textarea id="cf-msg" name="message" placeholder="Tell us what you have in mind — activities, budget, any special requests…"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="formSubmitBtn">
+          Send Enquiry →
+        </button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Message Sent.</h3>
+        <p>Thank you for reaching out. We will be in touch within one hour during business hours.<br><br>
+        <span style="font-size:11px;color:var(--text-light);letter-spacing:0.06em;">A copy has been sent to hello@primoraescape.com</span></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -884,7 +1223,7 @@
           </div>
         </div>
       </div>
-      <a href="#contact" class="btn-primary">Plan Your Batam Trip</a>
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20am%20planning%20a%20trip%20to%20Batam%20Island%20and%20would%20love%20your%20help%20putting%20together%20an%20itinerary.%20When%20would%20be%20a%20good%20time%20to%20discuss%3F" class="btn-primary">Plan Your Batam Trip</a>
     </div>
   </div>
 </section>
@@ -905,7 +1244,7 @@
         <span class="dest-tag">Most Popular</span>
         <div class="dest-name">Bali, Indonesia</div>
         <div class="dest-tagline">Rice terraces, temple sunsets, and the island of the gods — Bali never disappoints.</div>
-        <a href="#contact" class="dest-arrow">Enquire Now →</a>
+        <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20am%20interested%20in%20booking%20a%20trip%20and%20would%20love%20to%20get%20a%20quote.%20Could%20you%20help%20me%20plan%20my%20journey%3F" class="dest-arrow">Enquire Now →</a>
       </div>
     </div>
     <div class="dest-card coming-soon">
@@ -986,7 +1325,7 @@
       <span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span>
       <h3 class="svc-title">Custom Tour Packages</h3>
       <p class="svc-desc">Share your dates and preferences. We design a considered itinerary around your travel style — nothing generic, nothing rushed.</p>
-      <a href="#contact" class="svc-link">Get a Quote</a>
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20custom%20travel%20package.%20Could%20you%20help%20me%3F" class="svc-link">Get a Quote</a>
     </div>
     <div class="svc-card reveal reveal-d2">
       <div class="svc-num">02</div>
@@ -1204,7 +1543,7 @@
           </div>
         </div>
       </div>
-      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%21%20I%27d%20like%20to%20enquire%20about%20a%20corporate%20outing%20package." class="btn-corp">
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20am%20interested%20in%20arranging%20a%20corporate%20outing%20or%20group%20retreat%20to%20Batam.%20Could%20you%20share%20more%20details%20on%20your%20corporate%20packages%3F" class="btn-corp">
         Request a Corporate Quote <span class="btn-corp-arrow">→</span>
       </a>
     </div>
@@ -1311,8 +1650,8 @@
     <h2 class="cta-title">Every Detail.<br><em>Effortlessly</em> Arranged.</h2>
     <p class="cta-sub">A weekend in Batam or a curated island itinerary — send us a message and we will take it from there.</p>
     <div class="cta-actions">
-      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%21%20I%27d%20like%20to%20plan%20my%20a%20trip." class="btn-primary">WhatsApp Us</a>
-      <a href="/cdn-cgi/l/email-protection#026a676e6e6d42636876706374676e2c6b66" class="btn-white">✉️ Send an Email</a>
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20came%20across%20your%20website%20and%20would%20love%20to%20plan%20a%20trip%20to%20Indonesia.%20Could%20you%20help%20me%20put%20together%20a%20package%3F" class="btn-primary">WhatsApp Us</a>
+      <button class="btn-white" onclick="openEmailModal()">Send an Enquiry</button>
     </div>
     <p style="margin-top:28px;font-size:13px;color:rgba(255,255,255,0.55);">Based in Batam, Indonesia &nbsp;·&nbsp; Serving Singapore &amp; Malaysia</p>
   </div>
@@ -1340,7 +1679,7 @@
           </svg>
         </a>
         <!-- WhatsApp -->
-        <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%21%20I%27d%20like%20to%20plan%20my%20a%20trip." class="social-btn wa" aria-label="WhatsApp">
+        <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20found%20you%20on%20your%20website%20and%20would%20like%20to%20find%20out%20more%20about%20your%20travel%20packages." class="social-btn wa" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
           </svg>
@@ -1378,7 +1717,7 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="#">WhatsApp: +62 8XX XXX XXXX</a></li>
+        <li><a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20found%20you%20on%20your%20website%20and%20would%20like%20to%20find%20out%20more%20about%20your%20travel%20packages.">WhatsApp: +62 818 0900 2206</a></li>
         <li><a href="#"><span class="__cf_email__" data-cfemail="4d25282121220d2c27393f2c3b2821632429">[email&#160;protected]</span></a></li>
         <li><a href="#">Batam Centre, Batam</a></li>
         <li><a href="#">Kepulauan Riau, Indonesia</a></li>
@@ -1527,6 +1866,103 @@
       const t = document.querySelector(a.getAttribute('href'));
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
     });
+  });
+  // ── Promo Popup ─────────────────────────────────────────
+  const promoPopup    = document.getElementById('promoPopup');
+  const promoBackdrop = document.getElementById('promoBackdrop');
+  const promoClose    = document.getElementById('promoClose');
+  const promoDismiss  = document.getElementById('promoDismiss');
+  const promoCtaBtn   = document.getElementById('promoCtaBtn');
+
+  // Show popup after 3s if not dismissed in this session
+  if (!sessionStorage.getItem('promoDismissed')) {
+    setTimeout(() => {
+      promoPopup.classList.add('show');
+      promoBackdrop.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }, 3000);
+  }
+
+  function dismissPromo() {
+    promoPopup.classList.remove('show');
+    promoPopup.classList.add('hide');
+    promoBackdrop.classList.remove('show');
+    document.body.style.overflow = '';
+    sessionStorage.setItem('promoDismissed', '1');
+  }
+
+  promoClose.addEventListener('click', dismissPromo);
+  promoDismiss.addEventListener('click', dismissPromo);
+  promoBackdrop.addEventListener('click', dismissPromo);
+
+  // CTA opens WhatsApp with promo message
+  promoCtaBtn.addEventListener('click', () => {
+    dismissPromo();
+    window.open('https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20saw%20your%20founding%20guest%20offer%20on%20your%20website%20and%20would%20like%20to%20claim%20the%20exclusive%20discount%20on%20my%20first%20package.%20Could%20you%20share%20more%20details%3F', '_blank');
+  });
+
+  // ── Email Modal ──────────────────────────────────────────
+  const emailModal = document.getElementById('emailModal');
+  const modalClose = document.getElementById('modalClose');
+
+  function openEmailModal(isPromo = false) {
+    emailModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Pre-fill message if coming from promo
+    if (isPromo) {
+      const msgField = document.getElementById('cf-msg');
+      if (msgField && !msgField.value) {
+        msgField.value = "I'd like to claim the exclusive founding guest discount. Please share more details about available packages.";
+      }
+    }
+  }
+
+  function closeEmailModal() {
+    emailModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeEmailModal);
+  emailModal.addEventListener('click', e => {
+    if (e.target === emailModal) closeEmailModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeEmailModal();
+  });
+
+  // ── Contact Form Submission ──────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('formSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const name     = document.getElementById('cf-name').value.trim();
+    const email    = document.getElementById('cf-email').value.trim();
+    const phone    = document.getElementById('cf-phone').value.trim();
+    const origin   = document.getElementById('cf-origin').value;
+    const dest     = document.getElementById('cf-dest').value;
+    const pax      = document.getElementById('cf-pax').value;
+    const dates    = document.getElementById('cf-dates').value.trim();
+    const message  = document.getElementById('cf-msg').value.trim();
+
+    // Build mailto link as fallback while also showing success state
+    const subject = encodeURIComponent(`Enquiry from ${name} — ${dest || 'General'}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n` +
+      `From: ${origin || 'Not specified'}\nDestination: ${dest || 'Not specified'}\n` +
+      `Group Size: ${pax || 'Not specified'}\nDates: ${dates || 'Flexible'}\n\n` +
+      `Message:\n${message}`
+    );
+
+    // Open mailto (client's default mail app) targeting the business email
+    window.location.href = `mailto:hello@primoraescape.com?subject=${subject}&body=${body}`;
+
+    // Show success state after brief delay
+    setTimeout(() => {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    }, 600);
   });
 </script>
 </body>
