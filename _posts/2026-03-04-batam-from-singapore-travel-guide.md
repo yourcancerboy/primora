@@ -4,7 +4,7 @@ title: "Batam from Singapore: The Complete 2026 Travel Guide"
 subtitle: "Everything you need to know — ferry, hotels, things to do, and how to make the most of a weekend trip."
 date: 2026-03-04
 category: Travel Guide
-image: /img/blog/batam-guide-cover.jpg
+image: /img/cover-2.jpg
 description: "Planning a trip to Batam from Singapore? This complete 2026 guide covers the ferry, best hotels, things to do, where to eat, and how to plan the perfect weekend escape."
 ---
 
