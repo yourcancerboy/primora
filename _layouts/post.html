@@ -15,7 +15,9 @@ layout: default
   </div>
 
   {% if page.image %}
-  <img src="{{ page.image }}" alt="{{ page.title }}" class="article-cover" loading="eager">
+  <div class="article-cover-wrap">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="article-cover" loading="eager">
+  </div>
   {% endif %}
 
   <div class="article-body">
