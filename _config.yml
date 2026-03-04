@@ -1,0 +1,22 @@
+title: Primora Escape Co.
+description: Curated travel packages to Batam, Bali, Komodo & beyond. Serving travellers from Singapore & Malaysia.
+url: "https://primoraescape.com"
+baseurl: ""
+
+# Blog settings
+permalink: /blog/:slug/
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article>
+  <div class="article-hero">
+    <div class="article-hero-inner">
+      <div class="blog-meta">
+        <span class="blog-tag">{{ page.category | default: 'Travel Guide' }}</span>
+        <span class="blog-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      </div>
+      <h1 class="article-title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </div>
+  </div>
+
+  {% if page.image %}
+  <img src="{{ page.image }}" alt="{{ page.title }}" class="article-cover" loading="eager">
+  {% endif %}
+
+  <div class="article-body">
+    <a href="/blog/" class="article-back">← Back to Journal</a>
+    {{ content }}
+
+    <!-- CTA box at end of every article -->
+    <div class="article-cta">
+      <h3>Ready to <em>Plan Your Trip?</em></h3>
+      <p>Let us arrange every detail — ferry, hotel, tours and transfers. WhatsApp us and we will take it from there.</p>
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.%21%20I%20read%20your%20travel%20guide%20and%20would%20love%20to%20plan%20a%20trip.%20Could%20you%20help%20me%3F" class="btn-primary">WhatsApp Us →</a>
+    </div>
+  </div>
+</article>

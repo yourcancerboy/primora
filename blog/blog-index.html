@@ -1,0 +1,72 @@
+---
+layout: default
+title: Travel Journal | Primora Escape Co.
+description: Guides, tips and destination stories for travellers from Singapore and Malaysia exploring Indonesia.
+---
+
+<section class="blog-hero">
+  <div class="blog-hero-content">
+    <div class="section-chip">Travel Journal</div>
+    <h1 class="blog-hero-title">Stories & Guides<br>for <em>Discerning</em> Travellers</h1>
+    <p class="blog-hero-sub">Destination guides, travel tips, and honest insights for Singapore and Malaysia travellers exploring Indonesia.</p>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="blog-container">
+
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% assign featured = sorted_posts | first %}
+
+    {% if featured %}
+    <!-- Featured Post -->
+    <a href="{{ featured.url }}" class="blog-featured">
+      {% if featured.image %}
+      <div class="blog-featured-img" style="background-image: url('{{ featured.image }}')"></div>
+      {% else %}
+      <div class="blog-featured-img blog-featured-img--placeholder"></div>
+      {% endif %}
+      <div class="blog-featured-body">
+        <div class="blog-meta">
+          <span class="blog-tag">{{ featured.category | default: 'Travel Guide' }}</span>
+          <span class="blog-date">{{ featured.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <h2 class="blog-featured-title">{{ featured.title }}</h2>
+        <p class="blog-featured-excerpt">{{ featured.excerpt | strip_html | truncate: 160 }}</p>
+        <span class="blog-read-more">Read Article →</span>
+      </div>
+    </a>
+    {% endif %}
+
+    <!-- All Posts Grid -->
+    {% if sorted_posts.size > 1 %}
+    <div class="blog-grid">
+      {% for post in sorted_posts offset: 1 %}
+      <a href="{{ post.url }}" class="blog-card">
+        {% if post.image %}
+        <div class="blog-card-img" style="background-image: url('{{ post.image }}')"></div>
+        {% else %}
+        <div class="blog-card-img blog-card-img--placeholder"></div>
+        {% endif %}
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span class="blog-tag">{{ post.category | default: 'Travel Guide' }}</span>
+            <span class="blog-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </div>
+          <h3 class="blog-card-title">{{ post.title }}</h3>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
+          <span class="blog-read-more">Read More →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if sorted_posts.size == 0 %}
+    <div class="blog-empty">
+      <p>Articles coming soon.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
