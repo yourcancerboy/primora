@@ -16,11 +16,10 @@ This guide covers everything you need to know for a first — or return — trip
 
 ## Getting to Batam from Singapore
 
-The ferry is the only way in, and it is genuinely easy. Several terminals in Singapore operate services to Batam:
+The ferry is the best way in, and it is genuinely easy. Several terminals in Singapore operate services to Batam:
 
-- **HarbourFront Ferry Terminal** → Batam Centre (most popular route)
-- **Tanah Merah Ferry Terminal** → Nongsapura / Sekupang
-- **Changi Ferry Terminal** → Telaga Punggur (less busy, good for east Batam)
+- **HarbourFront Ferry Terminal** → Batam Centre (most popular route) / Harbour Bay
+- **Tanah Merah Ferry Terminal** → Batam Centre
 
 The crossing takes between 45 minutes and 1 hour depending on the route. Ferries run daily from approximately 7am to 10pm, with departures roughly every hour during peak times.
 
@@ -54,10 +53,10 @@ Batam is quietly regarded as one of the region's best golf destinations. Several
 ### Seafood Dining
 Eating well is one of the highlights of any Batam trip. The island has an abundance of seafood restaurants — most operating in the open-air style with tanks of live fish, crab, prawns and lobster to choose from.
 
-**Recommended areas for seafood:** Ocarina Waterfront, Batam Centre waterfront, and the seafood strip along Jalan Sekupang.
+**Recommended areas for seafood:** Piayu Waterfront, Batam Centre waterfront, and the seafood strip along the Barelang Bridge.
 
 ### Shopping & Malls
-Batam Centre and the surrounding area has several large malls — **Mega Mall Batam Centre** and **BCS Mall** being the most visited. Prices on electronics, clothing, and local goods are noticeably lower than Singapore.
+Batam Centre and the surrounding area has several large malls — **Grand Batam Mall** and **Mega Mall Batam Centre** being the most visited. Prices on electronics, clothing, and local goods are noticeably lower than Singapore.
 
 ---
 
