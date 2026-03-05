@@ -5,20 +5,28 @@ layout: default
 <article>
   <div class="article-hero">
     <div class="article-hero-inner">
-      <div class="blog-meta">
-        <span class="blog-tag">{{ page.category | default: 'Travel Guide' }}</span>
-        <span class="blog-date">{{ page.date | date: "%B %d, %Y" }}</span>
+
+      <!-- Left: text -->
+      <div class="article-hero-text">
+        <div class="blog-meta">
+          <span class="blog-tag">{{ page.category | default: 'Travel Guide' }}</span>
+          <span class="blog-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
       </div>
-      <h1 class="article-title">{{ page.title }}</h1>
-      {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+      <!-- Right: image -->
+      <div class="article-hero-img-wrap">
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="article-hero-img" loading="eager">
+        {% else %}
+        <div class="article-hero-img-placeholder"></div>
+        {% endif %}
+      </div>
+
     </div>
   </div>
-
-  {% if page.image %}
-  <div class="article-cover-wrap">
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="article-cover" loading="eager">
-  </div>
-  {% endif %}
 
   <div class="article-body">
     <a href="/blog/" class="article-back">← Back to Journal</a>
