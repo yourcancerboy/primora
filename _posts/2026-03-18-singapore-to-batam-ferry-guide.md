@@ -4,7 +4,7 @@ title: "Singapore to Batam Ferry: Which Terminal, Which Operator, and What to Ex
 description: "Everything Singaporeans need to know about taking the ferry to Batam — terminals, operators, prices, booking tips and what to expect on arrival."
 date: 2026-03-18
 author: Primora Escape Co.
-image: /assets/images/blog/singapore-batam-ferry.jpg
+image: /img/blog/ferry-terminal.jpg
 ---
 
 The ferry from Singapore to Batam is one of the shortest international crossings in the world — just 45 minutes on the water. But with three departure terminals in Singapore, multiple ferry operators, and a handful of arrival ports in Batam, first-timers often find it more confusing than it needs to be.
@@ -15,16 +15,13 @@ This guide breaks it all down so you know exactly what to book, where to go, and
 
 ## Which Terminal Do You Depart From in Singapore?
 
-There are three ferry terminals in Singapore that serve Batam routes:
+There are two ferry terminals in Singapore that serve Batam routes:
 
 **HarbourFront Ferry Terminal (HFT)**
 Located next to VivoCity mall and HarbourFront MRT station, this is the most popular and convenient terminal for most Singaporeans. It serves Batam Centre and Sekupang in Batam.
 
 **Tanah Merah Ferry Terminal**
 Located in the east of Singapore, near Bedok. Serves Nongsapura and Waterfront City (Batam) — both on the eastern side of Batam island. More convenient if you are staying in resorts on that side.
-
-**Changi Point Ferry Terminal**
-A smaller terminal that serves Batam's Nongsa area. Less commonly used but worth knowing if your hotel is near Nongsa Point or Turi Beach.
 
 ---
 
@@ -33,14 +30,14 @@ A smaller terminal that serves Batam's Nongsa area. Less commonly used but worth
 **Batam Centre Ferry Terminal**
 The main arrival hub — closest to the city centre, shopping malls (BCS, Nagoya Hill), and most mid-range hotels. Best for first-timers.
 
+**Harbour Bay Ferry Terminal**
+Closest terminal to Nagoya area and many popular hotels. Convenient for visitors planning to stay near Nagoya Hill, Harbour Bay, or the main nightlife and dining spots. Good choice for travelers who want quick access to the city.
+
 **Sekupang Ferry Terminal**
 On the western side of Batam. Less crowded than Batam Centre, but you'll need transport to reach most hotels. Mainly used for day trips.
 
-**Nongsapura Ferry Terminal**
-On the east of Batam, near Nongsa. Convenient if you are staying at Montigo Resorts, Nongsa Point Marina, or Turi Beach Resort.
-
-**Waterfront City Ferry Terminal**
-Newer terminal on the east side. Mostly used by visitors heading to Waterfront City resort area.
+**Gold Coast Ferry Terminal**
+Located in the Bengkong area. Convenient for visitors heading to resorts, beach clubs, and attractions around the east side of Batam. Best for travelers planning a relaxing stay away from the busy city center.
 
 ---
 
@@ -55,26 +52,22 @@ One of the most popular operators on the HarbourFront–Batam Centre route. Runs
 Operates the HarbourFront–Batam Centre and HarbourFront–Sekupang routes. Comfortable boats, good punctuality record.
 
 **Sindo Ferry**
-Serves multiple routes including Tanah Merah–Nongsapura. Good option if you are staying on the east side of Batam.
+Serves multiple routes including Tanah Merah–Batam Centre. Good option if you are staying on the city centre of Batam.
 
-**Indo Falcon / Pacific Ferries**
-Smaller operators also running select routes. Always check schedules online before booking as timings can change seasonally.
-
-**Tip:** All operators are similarly priced at around SGD 30–50 return per person. The more important decision is which route (terminal to terminal) suits your hotel location — not which operator.
+**Tip:** All operators are similarly priced at around SGD 70–80 round trip per person. The more important decision is which route (terminal to terminal) suits your hotel location — not which operator.
 
 ---
 
 ## How Much Do Tickets Cost?
 
-| Route | One Way (approx.) | Return (approx.) |
+| Route | One Way (approx.) | Round Trip (approx.) |
 |---|---|---|
-| HarbourFront → Batam Centre | SGD 17–23 | SGD 30–40 |
-| HarbourFront → Sekupang | SGD 17–23 | SGD 30–38 |
-| Tanah Merah → Nongsapura | SGD 18–25 | SGD 32–45 |
+| HarbourFront → Batam Centre | SGD 38-45 | SGD 70-80 |
+| HarbourFront → Sekupang | SGD 38-45 | SGD 70-80 |
+| Tanah Merah → Nongsapura | SGD 38-45 | SGD 70-80 |
 
-Prices fluctuate based on day of week, time of day, and peak periods. Weekend and public holiday ferries cost more than weekday sailings.
-
-Children aged 2–12 are typically charged at child rates (roughly 20–30% less). Infants under 2 travel free on most operators.
+Prices may vary slightly based on promotional offers.
+Children aged 2–12 are prices are generally the same as adult fares, as the company's published fare rules do not explicitly list a separate, reduced rate for children.
 
 ---
 
@@ -119,6 +112,7 @@ If you are booking through Primora Escape Co., we handle all ferry arrangements 
 - Can be choppy during monsoon season (December–February)
 
 **Arrival in Batam:**
+- Clear Indonesian Arrival Card — can be done before arrival (https://allindonesia.imigrasi.go.id/)
 - Clear Indonesian immigration — present passport
 - Collect VOA stamp (no extra fee for Singaporeans for short stays)
 - Collect any checked baggage
@@ -142,4 +136,4 @@ If you are booking through Primora Escape Co., we handle all ferry arrangements 
 
 Planning a Batam trip and want to skip all of this? That is exactly what Primora Escape Co. is for. We handle ferry bookings, hotel arrangements, transfers and activities — so all you carry is your passport and your weekend bag.
 
-[WhatsApp us to start planning your trip →](https://wa.me/your-number)
+[WhatsApp us to start planning your trip →](https://wa.me/6281809002206)
