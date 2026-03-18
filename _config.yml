@@ -2,6 +2,7 @@ title: Primora Escape Co.
 description: Curated travel packages to Batam, Bali, Komodo & beyond. Serving travellers from Singapore & Malaysia.
 url: "https://primoraescape.com"
 baseurl: ""
+timezone: Asia/Singapore
 
 # Blog settings
 permalink: /blog/:slug/
