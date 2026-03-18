@@ -60,7 +60,7 @@ Serves multiple routes including Tanah Merah–Batam Centre. Good option if you 
 
 ## How Much Do Tickets Cost?
 
-| Route | One Way (approx.) | Round Trip (approx.) |
+| Route | One Way | Round Trip |
 |---|---|---|
 | HarbourFront → Batam Centre | SGD 38-45 | SGD 70-80 |
 | HarbourFront → Sekupang | SGD 38-45 | SGD 70-80 |
