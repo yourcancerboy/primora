@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Singapore to Batam Ferry: Which Terminal, Which Operator, and What to Expect"
+subtitle: "Terminals, operators, prices, and what to expect on arrival — everything you need before booking your ferry."
 description: "Everything Singaporeans need to know about taking the ferry to Batam — terminals, operators, prices, booking tips and what to expect on arrival."
 date: 2026-03-18
+category: Travel Guide
 author: Primora Escape Co.
 image: /img/blog/ferry-terminal.jpg
 ---
