@@ -20,6 +20,26 @@ layout: null
     <priority>0.8</priority>
   </url>
 
+  <!-- Landing pages -->
+  <url>
+    <loc>https://primoraescape.com/batam/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://primoraescape.com/batam-golf/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://primoraescape.com/batam-corporate/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog posts -->
   {% for post in site.posts %}
   <url>
