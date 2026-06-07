@@ -1,0 +1,184 @@
+---
+layout: default
+title: "Batam Golf Packages from Singapore | Primora Escape Co."
+description: "Batam golf packages from Singapore — 12+ world-class courses, green fees from SGD 35, and the ferry takes 45 minutes. We arrange ferry, transfers, hotel and tee times as one complete package."
+---
+
+<style>
+  .golf-hero { background: var(--navy); padding: 140px 60px 100px; position: relative; overflow: hidden; }
+  .golf-hero::before { content: ''; position: absolute; inset: 0; background: url('/img/cover-1.jpg') center/cover no-repeat; opacity: 0.20; }
+  .golf-hero::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px; background: var(--ivory); clip-path: ellipse(52% 100% at 50% 100%); }
+  .golf-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; text-align: center; }
+  .golf-hero h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(40px, 6vw, 68px); font-weight: 600; color: var(--white); line-height: 1.05; margin-bottom: 20px; }
+  .golf-hero h1 em { font-style: italic; color: var(--champagne); }
+  .golf-hero p { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+  .hero-badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero-badge { background: rgba(214,185,140,0.12); border: 1px solid rgba(214,185,140,0.25); color: var(--champagne); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 18px; border-radius: 2px; }
+
+  .golf-section { padding: 80px 60px; background: var(--ivory); }
+  .golf-section.alt { background: var(--white); }
+  .golf-inner { max-width: 1100px; margin: 0 auto; }
+  .golf-section h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(30px, 4vw, 46px); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 14px; }
+  .golf-section h2 em { font-style: italic; color: var(--gold); }
+  .golf-section .lead { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.8; max-width: 640px; margin-bottom: 48px; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .course-card { background: var(--ivory); border-radius: 4px; padding: 36px 32px; border-top: 3px solid var(--champagne); }
+  .course-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .course-badge { font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: rgba(184,150,90,0.10); padding: 3px 10px; border-radius: 2px; display: inline-block; margin-bottom: 14px; }
+  .course-card p { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.75; }
+
+  .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pkg-card { background: var(--navy); border-radius: 4px; padding: 36px 28px; text-align: center; position: relative; }
+  .pkg-card.featured { border: 1px solid rgba(214,185,140,0.4); }
+  .pkg-card .popular-tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--champagne); color: var(--navy); font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 16px; border-radius: 2px; white-space: nowrap; }
+  .pkg-name { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--champagne); margin-bottom: 16px; }
+  .pkg-price { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 600; color: var(--white); line-height: 1; margin-bottom: 4px; }
+  .pkg-price-unit { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
+  .pkg-includes { list-style: none; text-align: left; margin-bottom: 28px; }
+  .pkg-includes li { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+  .pkg-includes li::before { content: '✓'; color: var(--champagne); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+  .btn-pkg { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); background: var(--champagne); padding: 14px 24px; border-radius: 2px; text-decoration: none; text-align: center; transition: background 0.3s; }
+  .btn-pkg:hover { background: var(--gold); color: var(--white); }
+
+  .golf-cta { background: var(--navy); padding: 80px 60px; text-align: center; }
+  .golf-cta h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(30px, 4vw, 50px); font-weight: 600; color: var(--white); margin-bottom: 16px; }
+  .golf-cta h2 em { font-style: italic; color: var(--champagne); }
+  .golf-cta p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); max-width: 520px; margin: 0 auto 36px; line-height: 1.75; }
+
+  .btn-ghost { font-size: 12px; font-weight: 500; color: var(--champagne); border: 1px solid rgba(214,185,140,0.4); padding: 14px 36px; border-radius: 2px; text-decoration: none; display: inline-block; letter-spacing: 0.10em; text-transform: uppercase; transition: border-color 0.3s, color 0.3s; margin-left: 16px; }
+  .btn-ghost:hover { border-color: var(--champagne); color: var(--white); }
+
+  @media (max-width: 768px) {
+    .golf-hero { padding: 120px 24px 80px; }
+    .golf-section { padding: 60px 24px; }
+    .course-grid, .pkg-grid { grid-template-columns: 1fr; }
+    .golf-cta { padding: 60px 24px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://primoraescape.com/batam-golf/#service",
+  "name": "Batam Golf Packages from Singapore",
+  "description": "Complete golf packages from Singapore to Batam including return ferry, transfers, tee times at top Batam courses, and optional hotel accommodation.",
+  "provider": { "@id": "https://primoraescape.com/#business" },
+  "areaServed": [
+    { "@type": "Country", "name": "Singapore" },
+    { "@type": "Country", "name": "Malaysia" }
+  ],
+  "serviceType": "Golf Package",
+  "url": "https://primoraescape.com/batam-golf/"
+}
+</script>
+
+<!-- HERO -->
+<section class="golf-hero">
+  <div class="golf-hero-inner">
+    <div class="section-chip" style="background:rgba(214,185,140,0.12);color:var(--champagne);border:1px solid rgba(214,185,140,0.25);">Golf · Batam, Indonesia</div>
+    <h1>Batam Golf Packages<br><em>from Singapore</em></h1>
+    <p>World-class courses. Green fees from SGD 35. 45 minutes from Singapore by ferry. We arrange everything — you just show up with your clubs.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">12+ International Courses</span>
+      <span class="hero-badge">From SGD 120/pax</span>
+      <span class="hero-badge">Ferry + Transfer Included</span>
+      <span class="hero-badge">Groups Welcome</span>
+    </div>
+    <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.!%20I%27m%20interested%20in%20a%20Batam%20golf%20package.%20Can%20you%20help%3F" class="btn-primary">Get a Golf Package Quote →</a>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="golf-section">
+  <div class="golf-inner">
+    <div class="section-chip">Top Courses</div>
+    <h2>Batam's Best <em>Golf Courses</em></h2>
+    <p class="lead">Batam has over 12 international-standard courses. These are the four we most frequently recommend for visitors from Singapore.</p>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Tering Bay Golf & Country Club</h3>
+        <span class="course-badge">Top Rated</span>
+        <p>Consistently rated among the best courses in Indonesia. 18 holes to international standard, excellent course conditions year-round, and sea views from multiple fairways. The clubhouse is comfortable with good facilities. Best for golfers who want a premium round at a fair price.</p>
+      </div>
+      <div class="course-card">
+        <h3>Batam Hills Golf Resort</h3>
+        <span class="course-badge">36 Holes</span>
+        <p>A 36-hole facility — two full courses — making it ideal for full-day play or groups wanting variety. The courses wind through natural terrain with sea glimpses from higher elevations. Excellent for groups who want to play different layouts across a weekend stay.</p>
+      </div>
+      <div class="course-card">
+        <h3>Palm Spring Golf & Beach Resort</h3>
+        <span class="course-badge">Most Scenic</span>
+        <p>Batam's most scenic course — set along the beachfront with ocean views from most holes. A slightly more relaxed atmosphere than Tering Bay, but well-maintained and spectacularly located. The beach resort facilities are a bonus after your round.</p>
+      </div>
+      <div class="course-card">
+        <h3>Kabil Golf Course</h3>
+        <span class="course-badge">Best Value</span>
+        <p>A solid, well-priced option for groups or golfers looking for a straightforward, uncrowded round. Less scenically dramatic than the top courses but reliable and at the most competitive green fee in Batam. Good for warm-up rounds or budget-conscious groups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="golf-section alt">
+  <div class="golf-inner">
+    <div class="section-chip">Packages</div>
+    <h2>Golf Package <em>Options</em></h2>
+    <p class="lead">All packages include return ferry from your preferred Singapore terminal, transfers to and from the course, and tee time booking. Choose the format that suits your trip.</p>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-name">Day Trip</div>
+        <div class="pkg-price">SGD 120</div>
+        <div class="pkg-price-unit">per person (est.)</div>
+        <ul class="pkg-includes">
+          <li>Return ferry (HarbourFront)</li>
+          <li>Transfer to course & back</li>
+          <li>18-hole green fee</li>
+          <li>Buggy rental</li>
+          <li>Seafood lunch (optional add-on)</li>
+        </ul>
+        <a href="https://wa.me/6281809002206?text=Hi!%20I%27m%20interested%20in%20a%20Batam%20golf%20day%20trip." class="btn-pkg">Enquire →</a>
+      </div>
+      <div class="pkg-card featured">
+        <span class="popular-tag">Most Popular</span>
+        <div class="pkg-name">Overnight Escape</div>
+        <div class="pkg-price">SGD 220</div>
+        <div class="pkg-price-unit">per person (est.)</div>
+        <ul class="pkg-includes">
+          <li>Return ferry</li>
+          <li>All transfers</li>
+          <li>1 night hotel (mid-range)</li>
+          <li>18-hole green fee</li>
+          <li>Buggy rental</li>
+          <li>Seafood dinner (group reservation)</li>
+        </ul>
+        <a href="https://wa.me/6281809002206?text=Hi!%20I%27m%20interested%20in%20a%20Batam%20overnight%20golf%20package." class="btn-pkg">Enquire →</a>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-name">Group Golf</div>
+        <div class="pkg-price">Custom</div>
+        <div class="pkg-price-unit">tailored for your group</div>
+        <ul class="pkg-includes">
+          <li>Group ferry allocation</li>
+          <li>Coach/van transfers</li>
+          <li>Hotel room block</li>
+          <li>Tournament format setup</li>
+          <li>Group dinner & event space</li>
+          <li>Full logistics coordination</li>
+        </ul>
+        <a href="https://wa.me/6281809002206?text=Hi!%20I%27m%20organising%20a%20group%20golf%20trip%20to%20Batam." class="btn-pkg">Get Group Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="golf-cta">
+  <div class="section-chip" style="background:rgba(214,185,140,0.12);color:var(--champagne);border:1px solid rgba(214,185,140,0.25);margin:0 auto 24px;">Book Your Round</div>
+  <h2>Ready to <em>Tee Off?</em></h2>
+  <p>Tell us your preferred dates, number of players, and course preference. We will come back with a full package quote — usually within a few hours.</p>
+  <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.!%20I%27d%20like%20to%20book%20a%20Batam%20golf%20package%20from%20Singapore." class="btn-primary">WhatsApp Us →</a>
+  <a href="/blog/batam-golf-packages-singapore/" class="btn-ghost">Read the Golf Guide</a>
+</section>
