@@ -1,0 +1,189 @@
+---
+layout: default
+title: "Bali Tour Packages from Singapore & Malaysia | Primora Escape Co."
+description: "Curated Bali tour packages from Singapore and Malaysia. Temple tours, rice terraces, beach clubs, and luxury villas — arranged as a complete package by Primora Escape Co."
+---
+
+<style>
+  .dest-hero { background: var(--navy); padding: 140px 60px 100px; position: relative; overflow: hidden; }
+  .dest-hero::before { content: ''; position: absolute; inset: 0; background: url('/img/bali.jpg') center/cover no-repeat; opacity: 0.25; }
+  .dest-hero::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 60px; background: var(--ivory); clip-path: ellipse(52% 100% at 50% 100%); }
+  .dest-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; text-align: center; }
+  .dest-hero h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(42px, 6vw, 72px); font-weight: 600; color: var(--white); line-height: 1.05; margin-bottom: 20px; }
+  .dest-hero h1 em { font-style: italic; color: var(--champagne); }
+  .dest-hero p { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+  .hero-badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero-badge { background: rgba(214,185,140,0.12); border: 1px solid rgba(214,185,140,0.25); color: var(--champagne); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 18px; border-radius: 2px; }
+  .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  .dest-section { padding: 80px 60px; background: var(--ivory); }
+  .dest-section.alt { background: var(--white); }
+  .dest-inner { max-width: 1100px; margin: 0 auto; }
+  .dest-section h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(30px, 4vw, 46px); font-weight: 600; color: var(--navy); line-height: 1.1; margin-bottom: 14px; }
+  .dest-section h2 em { font-style: italic; color: var(--gold); }
+  .dest-section .lead { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.8; max-width: 640px; margin-bottom: 48px; }
+
+  .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .exp-card { background: var(--white); border-radius: 4px; padding: 32px 28px; border-bottom: 3px solid var(--champagne); }
+  .exp-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+  .exp-card p { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.75; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .two-col p { font-size: 14px; font-weight: 300; color: var(--text-mid); line-height: 1.85; margin-bottom: 16px; }
+  .info-box { background: var(--navy); border-radius: 4px; padding: 40px; }
+  .info-row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .info-row:last-child { border-bottom: none; }
+  .info-label { font-size: 11px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+  .info-value { font-size: 13px; font-weight: 400; color: var(--champagne); text-align: right; max-width: 60%; }
+
+  .dest-cta { background: var(--navy); padding: 80px 60px; text-align: center; }
+  .dest-cta h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(30px, 4vw, 50px); font-weight: 600; color: var(--white); margin-bottom: 16px; }
+  .dest-cta h2 em { font-style: italic; color: var(--champagne); }
+  .dest-cta p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); max-width: 520px; margin: 0 auto 36px; line-height: 1.75; }
+  .btn-ghost { font-size: 12px; font-weight: 500; color: var(--champagne); border: 1px solid rgba(214,185,140,0.4); padding: 14px 36px; border-radius: 2px; text-decoration: none; display: inline-block; letter-spacing: 0.10em; text-transform: uppercase; transition: border-color 0.3s, color 0.3s; margin-left: 16px; }
+  .btn-ghost:hover { border-color: var(--champagne); color: var(--white); }
+
+  @media (max-width: 768px) {
+    .dest-hero { padding: 120px 24px 80px; }
+    .dest-section { padding: 60px 24px; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+    .dest-cta { padding: 60px 24px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristDestination",
+      "name": "Bali",
+      "description": "Bali is Indonesia's most famous island, known for its temples, rice terraces, beaches, surf, and vibrant arts and cuisine scene.",
+      "url": "https://primoraescape.com/bali/",
+      "containedInPlace": { "@type": "Country", "name": "Indonesia" }
+    },
+    {
+      "@type": "Service",
+      "name": "Bali Tour Packages from Singapore",
+      "description": "Curated Bali tour packages from Singapore and Malaysia including flights, accommodation, transfers, temple tours, and cultural experiences.",
+      "provider": { "@id": "https://primoraescape.com/#business" },
+      "serviceType": "Tour Package",
+      "url": "https://primoraescape.com/bali/"
+    }
+  ]
+}
+</script>
+
+<!-- HERO -->
+<section class="dest-hero">
+  <div class="dest-hero-inner">
+    <div class="section-chip" style="background:rgba(214,185,140,0.12);color:var(--champagne);border:1px solid rgba(214,185,140,0.25);">Indonesia · Bali</div>
+    <h1>Bali Tour Packages<br><em>from Singapore</em></h1>
+    <p>Temples, rice terraces, beach clubs, volcanic landscapes, and Balinese cuisine — curated and arranged as a complete package for travellers from Singapore and Malaysia.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">2.5hr Flight from Singapore</span>
+      <span class="hero-badge">Cultural & Beach Experiences</span>
+      <span class="hero-badge">Luxury Villas Available</span>
+      <span class="hero-badge">Group & Corporate Trips</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.!%20I%27m%20interested%20in%20a%20Bali%20tour%20package.%20Can%20you%20help%3F" class="btn-primary">Plan My Bali Trip →</a>
+      <a href="/#contact" class="btn-ghost">Send Enquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="dest-section">
+  <div class="dest-inner">
+    <div class="section-chip">Experiences</div>
+    <h2>What Bali Offers</h2>
+    <p class="lead">Bali is one of the world's most diverse island destinations — from spiritual cultural immersion to beach club luxury and active outdoor adventures.</p>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <h3>Temples & Culture</h3>
+        <p>Tanah Lot at sunset, Uluwatu perched on the cliffs, Besakih on the slopes of Mount Agung — Bali's Hindu temple heritage is unlike anywhere else in Southeast Asia. A guided temple tour is essential on any first visit.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Rice Terraces & Nature</h3>
+        <p>The Tegallalang and Jatiluwih rice terraces are among Bali's most photographed landscapes. Combine with a morning trek up Mount Batur for sunrise views over the crater lake — a standout experience for active travellers.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Beaches & Surf</h3>
+        <p>Seminyak and Canggu for beach clubs and sunset drinks. Uluwatu and Padang Padang for world-class surf breaks. Nusa Dua for calm, resort-style swimming. Bali's south coast covers every beach preference.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Ubud: Arts & Wellness</h3>
+        <p>Bali's cultural heartland. Gallery-lined streets, traditional dance performances, cooking classes, and surrounded by jungle. Ubud is also the centre of Bali's wellness scene — yoga retreats, Ayurvedic treatments, and meditation programmes.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Luxury Villas</h3>
+        <p>Private pool villas are Bali's signature accommodation offering — and remarkably good value compared to equivalent luxury in Singapore. From Seminyak clifftop villas to jungle retreats in Ubud, we source and arrange the right property for your group.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Food & Nightlife</h3>
+        <p>Bali has one of Southeast Asia's most vibrant dining and nightlife scenes. Warungs serving genuine Balinese cuisine, international fine dining restaurants, rooftop beach clubs, and intimate cocktail bars. We recommend and book based on your preferences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="dest-section alt">
+  <div class="dest-inner">
+    <div class="two-col">
+      <div>
+        <div class="section-chip">Why Choose Us for Bali</div>
+        <h2>We Handle <em>Every Detail</em></h2>
+        <p>A Bali trip has more moving parts than a Batam weekend — flights, villa or hotel, multiple activity operators, inter-island transfers if you are visiting Nusa Penida or Nusa Lembongan, and dining reservations at popular spots that book up fast.</p>
+        <p>We coordinate all of it as a single package. You brief us on your dates, group size, interests, and budget. We send you a complete itinerary and price. You approve it, and we handle everything from there.</p>
+        <p>We have existing relationships with Bali-based hotels, villa management companies, and tour operators — which means faster bookings, better availability, and a reliable point of contact on the ground if anything needs adjustment during your trip.</p>
+        <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.!%20I%27d%20like%20to%20plan%20a%20Bali%20trip.%20Can%20you%20help%3F" class="btn-primary" style="margin-top:8px;">WhatsApp to Start Planning →</a>
+      </div>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Flight from Singapore</span>
+          <span class="info-value">~2.5 hours</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Flight from KL</span>
+          <span class="info-value">~2 hours</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Visa (Singaporeans)</span>
+          <span class="info-value">Free Visa on Arrival (30 days)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Currency</span>
+          <span class="info-value">Indonesian Rupiah (IDR)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Best Time to Visit</span>
+          <span class="info-value">April – October (dry season)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Min. Recommended Stay</span>
+          <span class="info-value">4 nights</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Best For</span>
+          <span class="info-value">Culture, beaches, wellness, groups</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Popular Areas</span>
+          <span class="info-value">Seminyak, Ubud, Canggu, Uluwatu, Nusa Dua</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="dest-cta">
+  <div class="section-chip" style="background:rgba(214,185,140,0.12);color:var(--champagne);border:1px solid rgba(214,185,140,0.25);margin:0 auto 24px;">Start Planning</div>
+  <h2>Your Bali Trip,<br><em>Arranged for You</em></h2>
+  <p>Tell us your travel dates, group size, and what kind of Bali experience you are after. We will put together a curated itinerary and package price.</p>
+  <a href="https://wa.me/6281809002206?text=Hi%20Primora%20Escape%20Co.!%20I%27d%20like%20to%20plan%20a%20Bali%20trip.%20Can%20you%20send%20me%20a%20package%20quote%3F" class="btn-primary">WhatsApp Us →</a>
+  <a href="/#contact" class="btn-ghost">Send an Enquiry</a>
+</section>
